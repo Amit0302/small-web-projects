@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linear Gradient</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+
+
+</head>
+
+<body>
+
+    <section>
+        <div class="btns">
+            <button id="myButton" class="btnn">#edffcb</button>
+            <button id="myButton2" class="btnn">#50c6ff</button>
+        </div>
+        <h2>Click the Code below to copy</h2>
+        <div class="copyCode">
+            background-image:linear-gradient(to right,#edffcb, #50c6ff)
+        </div>
+    </section>
+    <script>
+
+        let btn1 = document.getElementById("myButton");
+        let btn2 = document.getElementById("myButton2");
+
+        let rgb1="#004773";
+        let rgb2="#54d542";
+        let copyDiv=document.querySelector(".copyCode");
+        const hexValues = () => {
+            let myHexValues = "0123456789abcdef";
+            var colors = "#";
+            for (let i = 0; i < 6; i++) {
+                colors += (myHexValues[Math.floor(Math.random() * 16)]);
+            }
+            return colors;
+        }
+
+        const handleButton1 = () => {
+             rgb1 = hexValues();
+            document.body.style.backgroundImage=`linear-gradient(to right,${rgb1},${rgb2})`;
+            copyDiv.innerHTML=`background-image:linear-gradient(to right,${rgb1},${rgb2})`;
+            btn1.innerText=rgb1;
+
+        }
+
+        const handleButton2 = () => {
+             rgb2 = hexValues();
+            document.body.style.backgroundImage=`linear-gradient(to right,${rgb1},${rgb2})`;
+            copyDiv.innerHTML=`background-image:linear-gradient(to right,${rgb1},${rgb2})`;
+            btn2.innerText=rgb2;
+        }
+
+        btn1.addEventListener('click', handleButton1);
+        btn2.addEventListener('click', handleButton2);
+
+
+        copyDiv.addEventListener('click', ()=>{
+            navigator.clipboard.writeText(copyDiv.innerText);
+            alert("Color Copied");
+            
+
+        });
+    </script>
+</body>
+
+</html>
