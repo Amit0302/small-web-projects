@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(135deg,#39ECEE,#1563EC);
+}
+
+.container{
+    width: 500px;
+    height: 300px;
+    background: linear-gradient(166deg, rgba(100,94,124,1) 50%, rgba(47,113,203,1) 100%);    margin: 200px auto ;
+    border: 1px solid gray;
+    border-radius: 15px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .mainDiv{
+width:300px;
+height: 100px;
+background: rgb(128,199,108);
+background: linear-gradient(0deg, rgba(128,199,108,1) 47%, rgba(128,126,244,1) 100%);
+border: 5px double seagreen;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.mainDiv p{
+    font-size: 38px;
+    color: #333;
+    transition: linear 0.5s ;
+    -webkit-transition: linear 0.51s ;
+    -moz-transition: linear 0.51s ;
+    -ms-transition: linear 0.51s ;
+    -o-transition: linear 0.51s ;
+}
